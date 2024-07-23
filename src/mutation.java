@@ -38,7 +38,7 @@ public class mutation {
     public static String mutation_of_gnome(String gnome){
 
         while(true){
-            int random_number = mutation_resources.random_number_gen(1, gnome.length()),  random_number2 = mutation_resources.random_number_gen(1, gnome.length());
+            int random_number = mutation_resources.random_number_gen(1, gnome.length() - 1),  random_number2 = mutation_resources.random_number_gen(1, gnome.length() - 1);
             if(random_number != random_number2){
                 char temporary_city = gnome.charAt(random_number);
                 gnome = gnome.substring(0, random_number) + gnome.charAt(random_number2) + gnome.substring( random_number + 1);
